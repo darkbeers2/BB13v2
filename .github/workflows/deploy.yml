@@ -20,7 +20,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Create directory if it doesn't exist and copy the file directly
-            sudo mkdir -p /var/www/html
+            # sudo mkdir -p /var/www/html
             
             # If your HTML file is in a subfolder, change 'index.html' to 'subfolder/index.html'
             sudo cp *.html var/www/atsoverunder.com/BB13
