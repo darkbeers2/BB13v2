@@ -1,0 +1,29 @@
+name: Deploy HTML to Droplet
+
+on:
+  push:
+    branches:
+      - main  # Set this to your default branch if it's named differently
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy HTML file to DigitalOcean via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Create directory if it doesn't exist and copy the file directly
+            sudo mkdir -p /var/www/html
+            
+            # If your HTML file is in a subfolder, change 'index.html' to 'subfolder/index.html'
+            sudo cp *.html var/www/atsoverunder.com/BB13
+            
+            # Ensure proper permissions
+            sudo chmod 644 /var/www/atsoverunder.com/BB13/*.html
