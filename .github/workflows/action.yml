@@ -23,7 +23,10 @@ jobs:
             # sudo mkdir -p /var/www/html
             
             # If your HTML file is in a subfolder, change 'index.html' to 'subfolder/index.html'
-            sudo cp *.html /var/www/atsoverunder.com/BB13
+            sudo cp index.html /var/www/atsoverunder.com/BB13
+            sudo cp Steveindex.html /var/www/atsoverunder.com/BB13
+            sudo cp Myindex.html /var/www/atsoverunder.com/BB13
+            sudo cp JeffBB13.html /var/www/atsoverunder.com/BB13
             
             # Ensure proper permissions
             sudo chmod 644 /var/www/atsoverunder.com/BB13/*.html
