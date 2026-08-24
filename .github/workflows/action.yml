@@ -25,10 +25,10 @@ jobs:
             
             # If your HTML file is in a subfolder, change 'index.html' to 'subfolder/index.html'
             sudo git -C ./src/BB13/BB13v2 pull
-            sudo cp ./src/BB13/BB13v2/index.html /var/www/atsoverunder.com/BB13
-            sudo cp ./src/BB13/BB13v2/Steveindex.html /var/www/atsoverunder.com/BB13
-            sudo cp ./src/BB13/BB13v2/Myindex.html /var/www/atsoverunder.com/BB13
-            sudo cp ./src/BB13/BB13v2/JeffBB13.html /var/www/atsoverunder.com/BB13
+            sudo cp ./src/BB13/BB13v2/index.html /var/www/atsoverunder/static
+            sudo cp ./src/BB13/BB13v2/Steveindex.html /var/www/atsoverunder/static
+            sudo cp ./src/BB13/BB13v2/Myindex.html /var/www/atsoverunder/static
+            sudo cp ./src/BB13/BB13v2/JeffBB13.html /var/www/atsoverunder/static
             
             # Ensure proper permissions
             sudo chmod 644 /var/www/atsoverunder.com/BB13/*.html
